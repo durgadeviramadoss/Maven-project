@@ -7,8 +7,9 @@ pipeline {
                 cleanWs()
                 checkout scm
                 sh '''
-                    cd Maven-project/boxfuse-sample-java-war-hello-master/
-                    mvn package
+                    ls -l
+                   # cd Maven-project/boxfuse-sample-java-war-hello-master/
+                   # mvn package
                 '''
             }
         }
