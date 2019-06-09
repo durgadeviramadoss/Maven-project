@@ -10,7 +10,7 @@ RUN yum -y install  java-1.8.0-openjdk java-1.8.0-openjdk-devel
 RUN java -version
 
 WORKDIR /opt/tomcat/webapps
-COPY ./hello-1.0.war  /opt/tomcat/webapps/
+COPY hello-1.0.war  /opt/tomcat/webapps/
 EXPOSE 8088
 
 CMD ["/opt/tomcat/bin/catalina.sh", "run"]
