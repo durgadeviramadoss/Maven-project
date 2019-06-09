@@ -18,6 +18,7 @@ pipeline {
                 sh '''
                 sudo rm -rf /opt/tomcat/webapps/hello-1.0*               
                 sudo cp boxfuse-sample-java-war-hello-master/target/hello-1.0.war boxfuse-sample-java-war-hello-master/
+                sudo chown jenkins:jenkins hello-1.0.war
                 sudo docker build -f boxfuse-sample-java-war-hello-master/Dockerfile -t boxfuse .
                 '''
             }
