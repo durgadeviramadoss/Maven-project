@@ -6,10 +6,10 @@ pipeline {
             steps {
                 cleanWs()
                 checkout scm
-             /*   sh '''
+                sh '''
                    cd boxfuse-sample-java-war-hello-master/
                    mvn package
-                '''*/
+                '''
             }
         }
         stage("Deploy")
