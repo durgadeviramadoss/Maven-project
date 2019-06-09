@@ -16,7 +16,8 @@ pipeline {
         {
             steps{
                 sh '''
-                cp boxfuse-sample-java-war-hello-master/target/hello-1.0.war /opt/tomcat/webapps/
+                sudo rm -rf /opt/tomcat/webapps/hello-1.0*               
+                sudo cp boxfuse-sample-java-war-hello-master/target/hello-1.0.war /opt/tomcat/webapps/
                 sudo systemctl stop tomcat
                 sudo systemctl start tomcat
                 '''
