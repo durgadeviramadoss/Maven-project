@@ -11,6 +11,6 @@ RUN java -version
 
 WORKDIR /opt/tomcat/webapps
 COPY boxfuse-sample-java-war-hello-master/hello-1.0.war  /opt/tomcat/webapps/
-EXPOSE 8088
+EXPOSE 8080
 
 CMD ["/opt/tomcat/bin/catalina.sh", "run"]
